@@ -1,0 +1,57 @@
+:host ::ng-deep {
+    .chart-progress-arc {
+        width: 250px;
+        --width: 250px;
+        height: calc(var(--width) / 2);
+    }
+
+    svg {
+        font-size: 10px sans-serif;
+        height: 100%;
+    }
+
+    .chart-first {
+        fill: #017e63;
+    }
+
+    .chart-second {
+        fill: #d9d9d9;
+    }
+
+    .needle {
+        fill: #000000;
+    }
+
+    .needle-center {
+        fill: #ffffff;
+        stroke: #000000;
+        stroke-width: 5px;
+    }
+
+    .needle-center-pointer {
+        fill: red;
+        stroke-width: 5px;
+    }
+
+    .text {
+        color: "#112864";
+        font-size: 16px;
+    }
+
+    .legend {
+        font-family: var(--body-medium-font-family);
+        text-align: center;
+        margin-top: calc(-50px - 10px);
+    }
+
+    .title {
+        text-align: center;
+        color: steelblue;
+    }
+
+    .percentile {
+        text-align: center;
+        margin: 10px auto;
+        display: inline-block;
+    }
+}

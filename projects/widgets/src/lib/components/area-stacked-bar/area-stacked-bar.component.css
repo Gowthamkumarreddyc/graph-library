@@ -1,0 +1,38 @@
+::ng-deep path.domain {
+    stroke: #fff !important;
+}
+
+::ng-deep g.x-axis-grid path {
+    stroke: #ccc;
+}
+
+::ng-deep g.axis.y path {
+    stroke: none;
+}
+
+::ng-deep g.axis.y .tick line {
+    stroke: none;
+}
+
+
+::ng-deep g.axis.x .tick line {
+    stroke: none;
+}
+
+
+::ng-deep path.domain {
+    stroke: #ccc;
+}
+
+::ng-deep g.axis--x path.domain {
+    stroke: #fff;
+}
+
+::ng-deep g.x-axis-grid path {
+    stroke: #fff;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}

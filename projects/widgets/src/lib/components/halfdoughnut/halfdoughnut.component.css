@@ -1,0 +1,18 @@
+::ng-deep .center-text {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+::ng-deep .center-circle {
+  fill: #d9dee7;
+  stroke-width: 3px;
+  transform: translate(30, 40);
+}
+
+
+.chart {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}

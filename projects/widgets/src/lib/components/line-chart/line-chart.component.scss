@@ -1,0 +1,23 @@
+:host ::ng-deep {
+  path.domain {
+      stroke: #d8dee9;
+  }
+
+  g.x-axis-grid path {
+      stroke: #cccccc44;
+  }
+  g.axis.y {
+      path {
+          stroke: none;
+      }
+
+      .tick line {
+          stroke: none;
+      }
+  }
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+}

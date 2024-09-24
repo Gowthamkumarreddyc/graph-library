@@ -1,0 +1,22 @@
+::ng-deep path.domain {
+    stroke: #ccc;
+}
+
+::ng-deep g.x-axis-grid path {
+    stroke: #cccccc44;
+}
+
+::ng-deep g.axis.y {
+    path {
+        stroke: none;
+    }
+
+    .tick line {
+        stroke: none;
+    }
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}

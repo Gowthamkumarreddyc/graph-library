@@ -1,0 +1,61 @@
+
+  <p class="content-header" #chartHeader *ngIf="header">{{ header }}</p>
+  <div class="content-body">
+      <div class="row legends d-flex justify-content-around align-items-center">
+
+          <div *ngFor="let legend of legends" class="d-flex align-items-center" style="gap: 5px;">
+              <div class="legend-cirlce" [style.backgroundColor]="legend.legendColor"></div>
+              <div class="legend-text">{{legend.legendText}}</div>
+          </div>
+
+      </div>
+
+      <!-- Timeline Table Start -->
+      <div class="timeline-container" [id]="chartId">
+          <table width="100%" class="table-sequence" [style]="calWidthStyle">
+              <tbody>
+                  <tr height="30"></tr>
+                  <tr *ngFor="let row of yAxis; let i=index;">
+                      <td *ngFor="let col of xAxis; let j=index;">
+                          <div class="legend" *ngIf="j == 0">{{ row }}</div>
+                          <ng-container *ngIf="getSeries(row, col) as series">
+
+                              <div *ngIf="series['xAxis'] == col"
+                                  [class]="'events badge width-'+getStepCount(series.xAxis, series.xAxisTo)">
+                                  <div class="d-flex justify-content-between">
+                                      <div class="bar">
+                                          <!-- TODO to make dynamic for colors  #series.group -->
+                                          <!-- <span class="event-success"></span> -->
+                                          <!-- <span class="event-progress"></span> -->
+                                          <!-- <span class="event-upcoming"></span> -->
+                                      </div>
+                                      <div [class]="'events-mark '+series.type"
+                                          [title]="'Title Description: ('+series.yAxis+' # '+series.xAxis+' - '+series.xAxisTo+')'">
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </ng-container>
+                      </td>
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td *ngFor="let axis of xAxis">
+                          <div class="x-axis">{{ axis }}</div>
+                      </td>
+                  </tr>
+                  <tr height="30"></tr>
+              </tfoot>
+          </table>
+      </div>
+
+  </div>
+  <div class="content-footer" #chartFooter>
+      <!-- <div class="d-flex justify-content-center">
+          <div>Applicability: <b>Fleet</b></div>
+          <div class="mx-2">|</div>
+          <div>Size: <b>5x4</b></div>
+      </div> -->
+  </div>
+

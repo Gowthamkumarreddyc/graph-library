@@ -1,0 +1,31 @@
+:host ::ng-deep {
+  .chart-progress-bar {
+      .progress-container {
+          background-color: #e6e6e6;
+          width: 100%;
+
+          .bar {
+              color: transparent !important;
+          }
+      }
+
+      .title,
+      .count {
+          padding: 10px 5px !important;
+          white-space: nowrap !important;
+          font-family: var(--body-medium-font-family);
+          font-size: var(--body-medium-font-size);
+          font-weight: var(--body-medium-font-weight);
+      }
+
+      .title {
+          color: #868e96;
+      }
+  }
+}
+
+@media print {
+  body {
+      --webkit-print-color-adjust: exact;
+  }
+}
